@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Products </title>
+    <title> cart </title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -98,49 +98,140 @@
     <div class="container">
         <div class="row fantasy my-3">
             <h3>
-                Available products
+                My cart
             </h3>
         </div>
         <div class="row">
-            <div class="col-md-4 mt-2">
-                <div class="card">
-                    <div class="card-body p-0">
-                        <img src="https://images.pexels.com/photos/947879/pexels-photo-947879.jpeg" alt="Pineapple" class="img-fluid">
-                        <div class="float-left">
-                            <p class="p-2 m-0">
-                                <span class="small font-weight-bold">
-                                    Pineapple
-                                </span>
-                                <br>
-                                <span class="price"> &#8358; 4,000
-                                </span>
-                            </p>
-                        </div>
-                        <div class="float-right">
-                            <p>
-                                <span class="small font-weight-bold">
-                                    Time to half-life : 
-                                     <!-- (or whatever life) -->
-                                </span> <br>
-                                <span class="price">
-                                    <span class="badge badge-dark p-2 border border-0">4</span> days
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <button class="btn mx-auto btn-sm btn-rounded text-dark" onclick="event.preventDefault();
-                                    document.getElementById('add-to-cart-btn{{$item->id}}').submit()">
-                                Add to Cart <span class="fa fa-cart-plus"></span>
-                            </button>
-                            <form method="POST" id="add-to-cart-btn{{$item->id}}" action="add-to-cart/{{$item->id}}">
+            <div class="col-md-8 table-responsive">
+                <table class="table bg-white table-stripped table-card">
+                    <thead class="table-card-head">
+                        <tr>
+                            <th>
+                                Item
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Unit Price
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                            <th>
+                                Subtotal
+                            </th>
+                            <th>
 
-                            </form>
-                        </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="/img/image1.jpeg" alt="" class="img-fluid" width="200px">
+                            </td>
+                            <td>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </td>
+                            <td>
+                                &#8358;3,233
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="3">
+                            </td>
+                            <td>
+                                &#8358; 40000
+                            </td>
+                            <td>
+                                <button class="btn btn-black btn-sm">
+                                    <span class="fa fa-trash text-black"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/img/image1.jpeg" alt="" class="img-fluid" width="200px">
+                            </td>
+                            <td>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </td>
+                            <td>
+                                
+                                &#8358;3,233
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="3">
+                            </td>
+                            <td>
+                                &#8358; 40000
+                            </td>
+                            <td>
+                                <button class="btn btn-black btn-sm">
+                                    <span class="fa fa-trash text-black"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/img/image1.jpeg" alt="" class="img-fluid" width="200px">
+                            </td>
+                            <td>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </td>
+                            <td>
+                                &#8358;3,233
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="3">
+                            </td>
+                            <td>
+                                &#8358; 40000
+                            </td>
+                            <td>
+                                <button class="btn btn-black btn-sm">
+                                    <span class="fa fa-trash text-black"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Cart summary
+                    </div>
+                    <div class="card-body pt-2 pb-4">
+                        <ul class="list-group">
+                            <li class="list-group-item border-left-0 border-top-0 border-right-0">
+                                <div class="clear-fix">
+                                    <div class="float-left">
+                                        Items
+                                    </div>
+                                    <div class="float-right font-weight-bold">
+                                        3
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item border-left-0 border-top-0 border-right-0">
+                                <div class="clear-fix">
+                                    <div class="float-left">
+                                        Total
+                                    </div>
+                                    <div class="float-right font-weight-bold">
+                                        &#8358; 2,3000
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <button class="btn btn-block mt-3 btn-success">
+                    Proceed to Checkout
+                </button>
             </div>
+            
         </div>
     </div>
 </section>
